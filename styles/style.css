@@ -106,10 +106,13 @@ padding-bottom: 5px;
   outline: 1px solid #fff;
 }
 
-.search-form__label-text:hover {
-  text-decoration: underline; /*Пока под вопросом! Декорируйте текст — сделайте так, чтобы при наведении на чекбокс у текста появлялось подчёркивание. Обратите внимание, что оно должно появляться при наведении на любую точку лейбла, а не только на сам текст.*/
-
+.search-form__label-text{
 }
+ 
+.search-form__label:hover:not(:has(.search-form__textfield)), .button:hover {
+  text-decoration: underline; /*При наведении на чекбокс, кнопки у текста появляется подчёркивание.*/
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -158,8 +161,32 @@ appearance: none;
   background: #fff;
 }
 .button {
+  inline-size: 194px;
+    block-size: 34px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
 }
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background: #545050;
+}
+
 .search-form__submit-button {
+  align-self: end;
 }
 .content__details {
   display: flex;
@@ -242,7 +269,7 @@ appearance: none;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; /*учла возможность переаолнения, с использованием line-clamp*/
+  -webkit-line-clamp: 1; /*учла возможность переполнения, с использованием line-clamp*/
 
 }
 .content__video-card-thumbnail {
@@ -254,6 +281,7 @@ appearance: none;
 .more-button-template {
 }
 .more-button {
+  inline-size: 100%;
 }
 .error-template {
 }
