@@ -83,29 +83,79 @@ ol {
   align-items: flex-start;
 }
 .search-form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .search-form__fieldset-title {
 font-family: Fira Sans Condensed;
 font-weight: 400;
 font-size: 18px;
 line-height: 100%;
-
-
+padding-bottom: 5px;
 }
 .search-form__label {
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
-.search-form__label-text {
+
+.search-form__label:has(.search-form__textfield:focus-visible){
+  outline: 1px solid #fff;
 }
-.visually-hidden {
+
+.search-form__label-text:hover {
+  text-decoration: underline; /*Пока под вопросом! Декорируйте текст — сделайте так, чтобы при наведении на чекбокс у текста появлялось подчёркивание. Обратите внимание, что оно должно появляться при наведении на любую точку лейбла, а не только на сам текст.*/
 
 }
-.search-form__textfield {
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
+.search-form__textfield {
+border-width: 1px 0px 1px 0px;
+border-style: solid;
+border-color: #FFFFFF;
+font-family: inherit;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+background-color: transparent;
+color: #FFFFFFB2;
+appearance: none;
+}
+
+.search-form__textfield:focus{
+  outline: none;
+}
+
 .search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
 }
 .search-form__checkbox {
 }
 .search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  inline-size: 19px;
+  block-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  inline-size: 15px;
+  block-size: 15px;
+  background: #fff;
 }
 .button {
 }
