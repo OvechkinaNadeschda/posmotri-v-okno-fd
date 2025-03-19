@@ -60,9 +60,6 @@ ol {
   grid-template-columns: 711px 399px;
   align-items: end;
   gap: 30px;
-  padding: 133px 30px;
-  inline-size: 1140px;
-  /* block-size: 534px;*/
 }
 
 .result {
@@ -72,7 +69,7 @@ ol {
 .result__video-container {
   inline-size: 711px;
   block-size: 386px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -112,16 +109,11 @@ ol {
   cursor: pointer;
 }
 
-/*.search-form__label:has(.search-form__textfield:focus-visible){
-  outline: 1px solid #fff;
-}*/
-
 .search-form__label:focus-visible {
   outline: 1px solid #ffffff;
 }
 
-.search-form__label-text {
-}
+.search-form__label-text {}
 
 .search-form__label:hover:not(:has(.search-form__textfield)),
 .button:hover,
@@ -168,8 +160,7 @@ ol {
   gap: 15px;
 }
 
-.search-form__checkbox {
-}
+.search-form__checkbox {}
 
 .search-form__pseudo-checkbox {
   border: 1px solid #fff;
@@ -180,7 +171,7 @@ ol {
   align-items: center;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
   content: "";
   inline-size: 15px;
   block-size: 15px;
@@ -246,26 +237,22 @@ ol {
 
 .content__list-container {
   position: relative;
-  height: 534px;
+  height: 298px;
+  overflow: auto;
 }
 
 .content__list {
-  block-size: 298px;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: 30px;
 }
 
-.preloader-template {
-}
+.preloader-template {}
 
-.square {
-}
+.square {}
 
-.cards-list-item-template {
-}
+.cards-list-item-template {}
 
 .content__list-item {
   padding-left: 3px;
@@ -311,11 +298,12 @@ ol {
 
 .content__video-card-title {
   display: block;
-  font-size: 30px;
   font-family: Oswald, sans-serif;
-  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  width: 100%;
   text-transform: uppercase;
-  line-height: 1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -323,32 +311,30 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   overflow: hidden;
   /*учла возможность переполнения, с использованием line-clamp*/
 }
 
 .content__video-card-thumbnail {
-  width: 194;
-  /*inline-size: 194px;*/
+  inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
 }
 
-.more-button-template {
-}
+.more-button-template {}
 
 .more-button {
   inline-size: 100%;
 }
 
-.error-template {
-}
+.error-template {}
