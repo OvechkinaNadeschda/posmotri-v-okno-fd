@@ -9,8 +9,7 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 800px;
+  min-height: 800px;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -67,15 +66,15 @@ ol {
 }
 
 .result__video-container {
-  inline-size: 711px;
-  block-size: 386px;
-  margin-bottom: 16px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 13px;
   position: relative;
 }
 
 .result__video {
-  inline-size: 100%;
-  block-size: 100%;
+  width: 711px;
+  height: 386px;
   object-fit: cover;
   object-position: center;
 }
@@ -84,6 +83,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 2px;
 }
 
 .search-form__fieldset {
@@ -98,7 +98,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .search-form__label {
@@ -119,7 +119,12 @@ ol {
   outline-offset: 2px;
 }
 
-.search-form__label-text {}
+.search-form__label-text {
+  font-family: Fira Sans Condensed;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+}
 
 .search-form__label:hover:not(:has(.search-form__textfield)),
 .button:hover,
@@ -170,6 +175,7 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  margin-top: 2px;
 }
 
 /*.search-form__checkbox {}*/
@@ -181,8 +187,8 @@ ol {
 
 .search-form__pseudo-checkbox {
   border: 1px solid #fff;
-  inline-size: 19px;
-  block-size: 19px;
+  width: 19px;
+  height: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,14 +196,14 @@ ol {
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
   content: "";
-  inline-size: 15px;
-  block-size: 15px;
+  width: 15px;
+  height: 15px;
   background: #fff;
 }
 
 .button {
-  inline-size: 194px;
-  block-size: 34px;
+  width: 194px;
+  height: 34px;
   border: 1px solid #fff;
   background-color: transparent;
   color: inherit;
@@ -235,9 +241,10 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 26px;
-  inline-size: 100%;
-  block-size: 100%;
+  width: 100%;
+  height: 100%;
   grid-area: cards;
+  padding-bottom: 2px;
 }
 
 .title {
@@ -255,7 +262,7 @@ ol {
 
 .content__list-container {
   overflow-y: auto;
-  height: 534px;
+  height: 298px;
 }
 
 .content__list {
@@ -289,7 +296,6 @@ ol {
 }
 
 .content__video-card {
-  /* border: 2px solid transparent;*/
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -332,15 +338,15 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
-  block-size: 103px;
+  width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
 }
 
 .more-button {
-  inline-size: 100%;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 2px;
 }
