@@ -55,7 +55,6 @@ ol {
 .content {
   display: grid;
   grid-template-areas: "result cards";
-  grid-template-rows: 534px;
   grid-template-columns: 711px 399px;
   align-items: end;
   gap: 30px;
@@ -98,7 +97,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  padding-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .search-form__label {
@@ -109,28 +108,11 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:has(.search-form__textfield:active){
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
-}
-
-.search-form__label:focus-visible {
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
-}
-
 .search-form__label-text {
   font-family: Fira Sans Condensed;
-font-weight: 400;
-font-size: 18px;
-line-height: 100%;
-}
-
-.search-form__label:hover:not(:has(.search-form__textfield)),
-.button:hover,
-.content__card-link:hover {
-  text-decoration: underline;
-  /*При наведении на чекбокс, кнопки и катрочки у текста появляется подчёркивание.*/
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .visually-hidden {
@@ -145,7 +127,6 @@ line-height: 100%;
 
 .search-form__textfield {
   width: 225px;
-  /*height: 27px;*/
   border-width: 1px 0px 1px 0px;
   border-style: solid;
   border-color: #ffffff;
@@ -158,31 +139,9 @@ line-height: 100%;
   appearance: none;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
-}
-
-.search-form__textfield:active{
-  outline: 1px solid #ffffff;
-  outline-offset: -1px;
-}
-
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  margin-top: 2px;
-}
-
-/*.search-form__checkbox {}*/
-
-.search-form__checkbox:focus-visible {
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
 }
 
 .search-form__pseudo-checkbox {
@@ -192,13 +151,6 @@ line-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
-  content: "";
-  width: 15px;
-  height: 15px;
-  background: #fff;
 }
 
 .button {
@@ -217,19 +169,6 @@ line-height: 100%;
   line-height: normal;
   text-align: center;
   cursor: pointer;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:active {
-  background: #545050;
-}
-
-.button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .search-form__submit-button {
@@ -263,6 +202,9 @@ line-height: 100%;
 .content__list-container {
   overflow-y: auto;
   height: 298px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .content__list {
@@ -281,14 +223,6 @@ line-height: 100%;
   text-decoration: none;
   color: #ffffff;
   display: block;
-}
-
-.content__card-link:focus {
-  outline: none;
-}
-
-.content__card-link:focus-visible {
-  outline: 1px solid #ffffff;
 }
 
 .content__card-link_current {
@@ -349,4 +283,71 @@ line-height: 100%;
   width: 100%;
   margin-top: 30px;
   margin-bottom: 2px;
+}
+
+/*Состояния кнопок и поля ввода*/
+
+.search-form__label:has(.search-form__textfield:active) {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.search-form__label:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.search-form__label:hover:not(:has(.search-form__textfield)),
+.button:hover,
+.content__card-link:hover {
+  text-decoration: underline;
+  /*При наведении на чекбокс, кнопки и катрочки у текста появляется подчёркивание.*/
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
+.search-form__pseudo-checkbox:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #fff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background: #545050;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
 }
